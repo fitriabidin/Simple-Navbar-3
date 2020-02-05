@@ -1,0 +1,139 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6; }
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 1rem; }
+
+p {
+  font-size: 0.8rem; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+ul {
+  list-style: none; }
+
+.outernav {
+  background-color: black;
+  color: white; }
+  .outernav .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6rem 0; }
+    .outernav .container .right {
+      display: flex; }
+      .outernav .container .right a {
+        padding: 0 1.5rem;
+        border-right: 1px solid white;
+        font-size: 0.8rem;
+        color: white; }
+        .outernav .container .right a:last-child {
+          border-right: none; }
+        .outernav .container .right a:hover {
+          color: #7b8458; }
+
+.navbar {
+  background-color: #f4f4f4; }
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0; }
+    .navbar .container .logo h1 {
+      font-size: 2rem; }
+      .navbar .container .logo h1 span {
+        color: #7b8458; }
+    .navbar .container .menus ul {
+      display: flex; }
+      .navbar .container .menus ul a {
+        padding: 1rem 1.5rem;
+        margin: 0 0.8rem; }
+      .navbar .container .menus ul li {
+        position: relative; }
+        .navbar .container .menus ul li .submenus {
+          display: none; }
+          .navbar .container .menus ul li .submenus li span {
+            font-size: 0.8rem;
+            background-color: #7b8458;
+            padding: 0.5rem;
+            border-radius: 10px; }
+        .navbar .container .menus ul li a:hover {
+          color: #7b8458; }
+        .navbar .container .menus ul li:hover .submenus {
+          display: block;
+          position: absolute;
+          width: 250px;
+          top: 35px;
+          background-color: #ececec; }
+          .navbar .container .menus ul li:hover .submenus li {
+            padding: 1rem 0; }
+            .navbar .container .menus ul li:hover .submenus li:hover {
+              background-color: #bec5a0; }
+              .navbar .container .menus ul li:hover .submenus li:hover a {
+                color: white; }
+              .navbar .container .menus ul li:hover .submenus li:hover span {
+                background-color: black;
+                color: white; }
+  .navbar .checkout {
+    display: flex; }
+    .navbar .checkout p {
+      font-size: 1.3rem;
+      margin: 0 0.5rem;
+      color: #7b8458; }
+      .navbar .checkout p:hover {
+        color: black;
+        cursor: pointer; }
+
+#showcase {
+  background: #373738;
+  height: 86vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center; }
+  #showcase h1 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    color: white; }
+    #showcase h1 span {
+      color: #7b8458; }
+  #showcase h2 {
+    font-size: 2rem;
+    color: white; }
+    #showcase h2 span {
+      color: #7b8458; }
+  #showcase h3 {
+    color: #7b8458; }
+
+@media (max-width: 1000px) {
+  .navbar .container .checkout {
+    display: none; } }
+
+@media (max-width: 800px) {
+  .outernav {
+    display: none; }
+  .navbar .container {
+    flex-direction: column; }
+    .navbar .container .logo {
+      margin-bottom: 1.5rem; } }
+
+@media (max-width: 500px) {
+  .navbar .container {
+    overflow: hidden; }
+    .navbar .container .menus ul a {
+      font-size: 0.8rem;
+      padding: 1rem 0.8rem;
+      margin: 0; }
+  #showcase .container h1 {
+    font-size: 2rem; }
+  #showcase .container h2 {
+    font-size: 1rem; } }

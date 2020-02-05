@@ -1,0 +1,230 @@
+// Reset
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// Styling
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+p {
+  font-size: 0.8rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+ul {
+  list-style: none;
+}
+
+// Outernav CSS
+.outernav {
+  background-color: black;
+  color: white;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6rem 0;
+
+    .right {
+      display: flex;
+      a {
+        padding: 0 1.5rem;
+        border-right: 1px solid white;
+        font-size: 0.8rem;
+        color: white;
+        &:last-child {
+          border-right: none;
+        }
+
+        &:hover {
+          color: #7b8458;
+        }
+      }
+    }
+  }
+}
+
+// Navbar CSS
+
+.navbar {
+  background-color: #f4f4f4;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+
+    // logo Section
+    .logo h1 {
+      font-size: 2rem;
+      & span {
+        color: #7b8458;
+      }
+    }
+
+    // Menus section
+
+    .menus ul {
+      display: flex;
+
+      a {
+        padding: 1rem 1.5rem;
+        margin: 0 0.8rem;
+      }
+
+      li {
+        position: relative;
+
+        .submenus {
+          display: none;
+          li span {
+            font-size: 0.8rem;
+            background-color: #7b8458;
+            padding: 0.5rem;
+            border-radius: 10px;
+          }
+        }
+
+        & a:hover {
+          color: #7b8458;
+        }
+
+        &:hover .submenus {
+          display: block;
+          position: absolute;
+          width: 250px;
+          top: 35px;
+          background-color: #ececec;
+
+          & li {
+            padding: 1rem 0;
+            &:hover {
+              background-color: #bec5a0;
+
+              & a {
+                color: white;
+              }
+
+              span {
+                background-color: black;
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Checkout Section
+
+  .checkout {
+    display: flex;
+
+    p {
+      font-size: 1.3rem;
+      margin: 0 0.5rem;
+      color: #7b8458;
+      &:hover {
+        color: black;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// Showcase Section
+
+#showcase {
+  background: #373738;
+  height: 86vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  h1 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    color: white;
+
+    span {
+      color: #7b8458;
+    }
+  }
+  h2 {
+    font-size: 2rem;
+    color: white;
+
+    span {
+      color: #7b8458;
+    }
+  }
+  h3 {
+    color: #7b8458;
+  }
+}
+
+// Tablet
+
+@media (max-width: 1000px) {
+  .navbar {
+    .container {
+      .checkout {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .outernav {
+    display: none;
+  }
+  .navbar {
+    .container {
+      flex-direction: column;
+
+      .logo {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    .container {
+      overflow: hidden;
+
+      .menus ul a {
+        font-size: 0.8rem;
+        padding: 1rem 0.8rem;
+        margin: 0;
+      }
+    }
+  }
+  #showcase {
+    .container {
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1rem;
+      }
+    }
+  }
+}
